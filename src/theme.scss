@@ -1,0 +1,37 @@
+@import '~@angular/material/theming';
+
+@include mat-core();
+
+$mat-green: (
+  A500: #38b88b,
+  contrast: (
+    A500: white,
+  ),
+);
+
+$mat-pink: (
+  A500: #009c3a,
+  contrast: (
+    A500: #fff,
+  ),
+);
+
+$mat-red: (
+  A500: #fff,
+  contrast: (
+    A500: #fff,
+  ),
+);
+
+$graphql-angular-primary: mat-palette($mat-green, A500);
+$graphql-angular-accent: mat-palette($mat-pink, A500);
+
+$graphql-angular-warn: mat-palette($mat-red, A500);
+
+$graphql-angular-theme: mat-light-theme(
+  $graphql-angular-primary,
+  $graphql-angular-accent,
+  $graphql-angular-warn
+);
+
+@include angular-material-theme($graphql-angular-theme);
